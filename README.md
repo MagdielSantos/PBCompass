@@ -15,7 +15,7 @@ Nesta seção, vou manter um registro das minhas atividades de aprendizado no pr
 
 # Sprints
 
-[Sprint 1](Sprint%201/README.md)
+[Sprint 1](Sprint1/README.md)
 
 
 
