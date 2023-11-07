@@ -1,6 +1,6 @@
 # Sprint 1 - GIT e LINUX
 
-Nesta primeira sprint estou aprendendo sobre dois recursos indispensaveis para profissionais de tecnologia, GIT e Linux. Que desempenham papeis muito importantes em diversas etapas do desenvolvimento de um sotware ou um serviço.
+Nesta primeira sprint estou aprendendo sobre dois recursos indispensaveis para profissionais de tecnologia, GIT e Linux. Que desempenham papeis muito importantes em diversas etapas do desenvolvimento de um software ou um serviço.
 
 ## GIT
 
