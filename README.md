@@ -24,5 +24,10 @@ Nesta seção, vou manter um registro das minhas atividades de aprendizado no pr
 [Desafio Final Do PB](Desafio/README.md)
 
 
+# Contatos
+
+- **E-mail:** [magsantos20111@gmail.com]
+- **LinkedIn:** [https://www.linkedin.com/in/magdiel-santos-813884251/]
+- **Telefone:** [+55 (81) 98222-1508]
 
 
