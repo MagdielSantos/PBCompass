@@ -15,7 +15,8 @@ Nesta seção, vou manter um registro das minhas atividades de aprendizado no pr
 
 # Sprints
 
-[Sprint 1](Sprints/Sprint1/README.md) ![](https://geps.dev/progress/10)
+[Sprint 1](Sprints/Sprint1/README.md) 
+![](https://geps.dev/progress/7)
 
 
 
