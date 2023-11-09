@@ -16,4 +16,4 @@ Linux é um sistema operacional de código aberto baseado em Unix amplamente uti
 
 ## Atividades
 
-[Atividades Sprint1](Sprints/Sprint1/Atividades/Atividades.md) 
+[Atividades Sprint1](/Atividades/Atividades.md) 
