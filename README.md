@@ -14,7 +14,7 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 1](Sprints/Sprint1/README.md) 
 
-![](https://geps.dev/progress/7)
+![](https://geps.dev/progress/14)
 
 [Sprint 2](Sprints/Sprint2/README.md) 
 
