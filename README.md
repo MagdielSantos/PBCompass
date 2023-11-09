@@ -9,9 +9,6 @@ como ativides de arquitetura envolvendo levantamento de requisitos, documentaç�
 - **Hobbies:** [meus hobbies em sua maioria são voltados para tecnologia, no tempo livre gosto de projetar
 - pequnes projetos pessoais para diversas situações]
 
-# Aprendizado Atual
-
-Nesta seção, vou manter um registro das minhas atividades de aprendizado no programa de bolsas. Atualizarei periodicamente para criar um portfólio de estudos.
 
 # Sprints
 
@@ -54,7 +51,6 @@ Nesta seção, vou manter um registro das minhas atividades de aprendizado no pr
 [Sprint 10](Sprints/Sprint10/README.md) 
 
 ![](https://geps.dev/progress/0)
-
 
 
 
