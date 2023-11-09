@@ -16,7 +16,45 @@ Nesta seção, vou manter um registro das minhas atividades de aprendizado no pr
 # Sprints
 
 [Sprint 1](Sprints/Sprint1/README.md) 
+
 ![](https://geps.dev/progress/7)
+
+[Sprint 2](Sprints/Sprint2/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 3](Sprints/Sprint3/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 4](Sprints/Sprint4/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 5](Sprints/Sprint5/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 6](Sprints/Sprint6/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 7](Sprints/Sprint7/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 8](Sprints/Sprint8/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 9](Sprints/Sprint9/README.md) 
+
+![](https://geps.dev/progress/0)
+
+[Sprint 10](Sprints/Sprint10/README.md) 
+
+![](https://geps.dev/progress/0)
+
 
 
 
