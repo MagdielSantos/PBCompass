@@ -4,10 +4,10 @@
 - **Instituição de Ensino:** [UNINASSAU CAXANGÁ]
 - **Curso:** [Analise e Desenvolvimento De Sistemas]
 - **Semestre Atual:** [3º Periodo]
-- **Experiências na Área de Tecnologia:** [Atuei em alguns projetos academicos envolvendo tanto atividades de desenvolvimento de código
+- **Experiências na Área de Tecnologia:** [Atuei em alguns projetos acadêmicos envolvendo tanto atividades de desenvolvimento de código
 como ativides de arquitetura envolvendo levantamento de requisitos, documentação, prototipação etc.. ]
 - **Hobbies:** [meus hobbies em sua maioria são voltados para tecnologia, no tempo livre gosto de projetar
-- pequnes projetos pessoais para diversas situações]
+pequenos projetos pessoais para diversas situações]
 
 
 # Sprints
