@@ -1,3 +1,9 @@
+
+<div align="center">
+  <img src="https://github.com/MagdielSantos/MagdielSantos/blob/main/github-header-image.png" alt="Banner">
+</div>
+
+
 # Sobre Mim
 
 - **Cidade de Residência:** [Recife-PE]
