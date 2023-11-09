@@ -21,3 +21,7 @@ Linux é um sistema operacional de código aberto baseado em Unix amplamente uti
 ## Evidências 
 
 [Evidências Sprint1](../Sprint1/Evidências/) 
+
+## Certificados
+
+[Certificados Sprint1](../Sprint1/Certificados/) 
