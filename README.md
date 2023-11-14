@@ -20,7 +20,7 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 1](Sprints/Sprint1/README.md)
 
-![](https://geps.dev/progress/14)
+![](https://geps.dev/progress/62)
 
 - Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
 - Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
