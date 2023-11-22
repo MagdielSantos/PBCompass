@@ -20,17 +20,19 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 1](Sprints/Sprint1/README.md)
 
-![](https://geps.dev/progress/62)
+![](https://geps.dev/progress/100)
 
 - Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
 - Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
 
 
 
-
 [Sprint 2](Sprints/Sprint2/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/14)
+
+- SQL para Análise de Dados: Do básico ao avançado
+- Big Data Fundamentos 3.0
 
 [Sprint 3](Sprints/Sprint3/README.md) 
 
