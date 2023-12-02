@@ -29,7 +29,7 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 2](Sprints/Sprint2/README.md) 
 
-![](https://geps.dev/progress/14)
+![](https://geps.dev/progress/100)
 
 - SQL para Análise de Dados: Do básico ao avançado
 - Big Data Fundamentos 3.0
