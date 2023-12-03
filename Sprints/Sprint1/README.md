@@ -14,3 +14,14 @@ GIT é um sistema de controle de versão amplamente utilizado para rastrear e ge
 
 Linux é um sistema operacional de código aberto baseado em Unix amplamente utilizado. É conhecido por sua estabilidade, flexibilidade e segurança. É uma escolha popular para servidores e é a base de muitas distribuições, como Ubuntu, CentOS, Debian, e outras.
 
+## Atividades
+
+[Atividades Sprint1](../Sprint1/Atividades/Atividades.md) 
+
+## Evidências 
+
+[Evidências Sprint1](../Sprint1/Evidências/) 
+
+## Certificados
+
+[Certificados Sprint1](../Sprint1/Certificados/) 
