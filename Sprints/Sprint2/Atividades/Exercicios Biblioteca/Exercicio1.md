@@ -4,6 +4,6 @@ Apresente a query para listar todos os livros publicados após 2014. Ordenar pel
 
 Query:
 
-SELECT * from LIVRO 
-WHERE publicacao > "2014-12-31"
-ORDER BY Cod;
+SELECT * from LIVRO  
+WHERE publicacao > "2014-12-31"  
+ORDER BY Cod;  
