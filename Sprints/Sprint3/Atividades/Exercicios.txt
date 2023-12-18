@@ -1,0 +1,326 @@
+# Exercicio 1
+
+from datetime import date
+
+nome = input('Qual o seu nome?')
+idade = input('Ok! Qual a sua idade?')
+
+ano_atual = date.today().year
+ano_100 = (ano_atual - int(idade)) + 100
+print(ano_100)
+
+
+# Exercicio 2
+
+for i in range(3):
+    numero = int(input('Digite um número: '))
+    if numero % 2 == 0:
+        print(f'Par: {numero}')
+    else:
+        print(f'Ímpar: {numero}')
+
+
+# Exercicio 3
+
+for i in range(21):
+    if i % 2 == 0:
+        print(i)
+
+
+# Exercicio 4
+
+def Calc_Primo(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+for i in range(1, 101):
+    if Calc_Primo(i):
+        print(i)
+
+
+# Exercicio 5
+
+dia = 22
+mes = 10
+ano = 2022
+
+print('{}/{}/{}'.format(dia, mes, ano))
+
+
+# Exercicio 6
+
+a = [1, 1, 2, 3, 5, 8, 14, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+set_a = set(a)
+set_b = set(b)
+
+intersecao = set_a.intersection(set_b)
+
+print(list(intersecao))
+
+
+# Exercicio 7
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+numeros_impares = [numero for numero in a if numero % 2 != 0]
+
+print(numeros_impares)
+
+
+# Exercicio 8
+
+palavras = ['maça', 'arara', 'audio', 'radio', 'radar', 'moto']
+
+for palavra in palavras:
+    if palavra == palavra[::-1]:
+        print(f'A palavra: {palavra} é um palíndromo')
+    else:
+        print(f'A palavra: {palavra} não é um palíndromo')
+
+
+# Exercicio 9
+
+primeirosNomes = ['Joao', 'Douglas', 'Lucas', 'José']
+sobreNomes = ['Soares', 'Souza', 'Silveira', 'Pedreira']
+idades = [19, 28, 25, 31]
+
+for indice, (nome, sobrenome, idade) in enumerate(zip(primeirosNomes, sobreNomes, idades)):
+    print(f'{indice} - {nome} {sobrenome} está com {idade} anos')
+
+
+# Exercicio 10
+
+lista_teste = ['abc', 'abc', 'abc', '123', 'abc', '123', '123']
+print(list(set(lista_teste)))
+
+
+# Exercicio 11
+
+with open('arquivo_texto.txt', 'r') as arquivo:
+    conteudo = arquivo.read()
+print(conteudo)
+
+
+# Exercicio 12
+
+import json
+
+with open('person.json', 'r') as arquivo_json:
+    dados_json = json.load(arquivo_json)
+print(dados_json)
+
+
+# Exercicio 13
+
+def my_map(lst, f):
+    return [f(x) for x in lst]
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = my_map(lista, lambda x: x**2)
+print(result)
+
+
+# Exercicio 14
+
+def imprimir_parametros(*args, **kwargs):
+    for value in args:
+        print(value)
+    for value in kwargs.values():
+        print(value)
+
+imprimir_parametros(1, 3, 4, 'hello', parametro_nomeado='alguma coisa', x=20)
+
+
+# Exercicio 15
+
+class Lampada:
+    def __init__(self, ligada=False):
+        self.ligada = ligada
+
+    def liga(self):
+        self.ligada = True
+
+    def desliga(self):
+        self.ligada = False
+
+    def esta_ligada(self):
+        return self.ligada
+
+lampada = Lampada()
+lampada.liga()
+print("A lâmpada está ligada?", lampada.esta_ligada())
+lampada.desliga()
+print("A lâmpada ainda está ligada?", lampada.esta_ligada())
+
+
+# Exercicio 16
+
+def soma_numeros(string_numeros):
+    numeros = [int(x) for x in string_numeros.split(',')]
+    resultado = sum(numeros)
+    return resultado
+
+string_numeros = "1,3,4,6,10,76"
+soma = soma_numeros(string_numeros)
+print(soma)
+
+
+# Exercicio 17
+
+def separar_lista(lista):
+    tamanho = len(lista)
+    tamanho_parte = tamanho // 3
+    parte1 = lista[:tamanho_parte]
+    parte2 = lista[tamanho_parte: 2 * tamanho_parte]
+    parte3 = lista[2 * tamanho_parte:]
+    return parte1, parte2, parte3
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+parte1, parte2, parte3 = separar_lista(lista)
+print(parte1, parte2, parte3)
+
+
+# Exercicio 18
+
+speed = {'jan': 47, 'feb': 52, 'march': 47, 'April': 44, 'May': 52, 'June': 53, 'july': 54, 'Aug': 44, 'Sept': 54}
+valores_unicos = set(speed.values())
+lista_valores_unicos = list(valores_unicos)
+print(lista_valores_unicos)
+
+
+# Exercicio 19
+
+import random
+
+random_list = random.sample(range(500), 50)
+sorted_list = sorted(random_list)
+tamanho = len(sorted_list)
+mediana = sorted_list[tamanho // 2] if tamanho % 2 != 0 else (sorted_list[tamanho // 2 - 1] + sorted_list[tamanho // 2]) / 2
+media = sum(random_list) / len(random_list)
+valor_minimo = min(random_list)
+valor_maximo = max(random_list)
+print(f'Media: {media:.2f}, Mediana: {mediana:.1f}, Mínimo: {valor_minimo}, Máximo: {valor_maximo}')
+
+
+# Exercicio 20
+
+lista = [1, 0, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+lista_invertida = list(reversed(lista))
+print(lista_invertida)
+
+
+# Exercicio 21
+
+class Passaro:
+    def voar(self):
+        print("Voando...")
+
+    def emitir_som(self):
+        print("Passaro emitindo som...")
+
+class Pato(Passaro):
+    def emitir_som(self):
+        super().emitir_som()
+        print("Quack Quack")
+
+class Pardal(Passaro):
+    def emitir_som(self):
+        super().emitir_som()
+        print("Piu Piu")
+
+pato = Pato()
+pardal = Pardal()
+print("Pato")
+pato.voar()
+pato.emitir_som()
+print("\nPardal")
+pardal.voar()
+pardal.emitir_som()
+
+
+# Exercicio 22
+
+class Pessoa:
+    def __init__(self, id):
+        self.__nome = ""
+        self.id = id
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @nome.setter
+    def nome(self, novo_nome):
+        self.__nome = novo_nome
+
+pessoa = Pessoa(0)
+pessoa.nome = 'Fulano De Tal'
+print(pessoa.nome)
+
+
+# Exercicio 23
+
+class Calculo:
+    def somar(self, x, y):
+        return x + y
+
+    def subtrair(self, x, y):
+        return x - y
+
+x = 4
+y = 5
+calculo_instancia = Calculo()
+resultado_soma = calculo_instancia.somar(x, y)
+resultado_subtracao = calculo_instancia.subtrair(x, y)
+print(f"Somando: {x}+{y} = {resultado_soma}")
+print(f"Subtraindo: {x}-{y} = {resultado_subtracao}")
+
+
+# Exercicio 24
+
+class Ordenadora:
+    def __init__(self, lista):
+        self.listaBaguncada = lista
+
+    def ordenacaoCrescente(self):
+        self.listaBaguncada = sorted(self.listaBaguncada)
+        return self.listaBaguncada
+
+    def ordenacaoDecrescente(self):
+        self.listaBaguncada = sorted(self.listaBaguncada, reverse=True)
+        return self.listaBaguncada
+
+# Test with lista_teste1
+lista_teste1 = [3, 4, 2, 1, 5]
+crescente = Ordenadora(lista_teste1)
+print(crescente.ordenacaoCrescente())
+
+# Test with lista_teste2
+lista_teste2 = [9, 7, 6, 8]
+decrescente = Ordenadora(lista_teste2)
+print(decrescente.ordenacaoDecrescente())
+
+
+# Exercicio 25
+
+class Aviao:
+    def __init__(self, modelo, velocidade_maxima, capacidade):
+        self.modelo = modelo
+        self.velocidade_maxima = velocidade_maxima
+        self.cor = "Azul"
+        self.capacidade = capacidade
+
+avioes = [
+    Aviao("BOIENG456", "1500 km/h", 400),
+    Aviao("Embraer Praetor 600", "863 km/h", 14),
+    Aviao("Antonov An-2", "258 km/h", 12)
+]
+
+for aviao in avioes:
+    print(f"O avião de modelo {aviao.modelo} possui uma velocidade máxima de {aviao.velocidade_maxima}, capacidade para {aviao.capacidade} passageiros e é da cor {aviao.cor}.")
