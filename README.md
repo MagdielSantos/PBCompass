@@ -36,7 +36,9 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 3](Sprints/Sprint3/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- Python 3 - Curso Completo do Básico ao Avançado
 
 [Sprint 4](Sprints/Sprint4/README.md) 
 
