@@ -44,6 +44,10 @@ pequenos projetos pessoais para diversas situações]
 
 ![](https://geps.dev/progress/0)
 
+- Python 3 - Programação funcional com python
+- Docker para Desenvolvedores (com Docker Swarm e Kubernetes)
+- Estatística Descritiva com Python
+
 [Sprint 5](Sprints/Sprint5/README.md) 
 
 ![](https://geps.dev/progress/0)
