@@ -42,7 +42,7 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 4](Sprints/Sprint4/README.md) 
 
-![](https://geps.dev/progress/50)
+![](https://geps.dev/progress/100)
 
 - Python 3 - Programação funcional com python
 - Docker para Desenvolvedores (com Docker Swarm e Kubernetes)
