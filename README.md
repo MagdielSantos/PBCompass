@@ -42,15 +42,22 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 4](Sprints/Sprint4/README.md) 
 
-![](https://geps.dev/progress/50)
+![](https://geps.dev/progress/100)
 
 - Python 3 - Programação funcional com python
 - Docker para Desenvolvedores (com Docker Swarm e Kubernetes)
 - Estatística Descritiva com Python
 
-[Sprint 5](Sprints/Sprint5/README.md) 
+[Sprint 5](Sprints/Sprint5/README.md)
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- AWS Skill Builder - AWS Partner: Sales Accreditation (Business)
+- AWS Skill Builder - AWS Cloud Quest: Cloud Practitioner
+- AWS Skill Builder - AWS Partner: Aspectos econômicos da Cloud
+- AWS Skill Builder - AWS Partner: Accreditation (Technical)
+- AWS Skill Builder - Exam Prep: AWS Certified Cloud Practitioner
+
 
 [Sprint 6](Sprints/Sprint6/README.md) 
 
