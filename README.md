@@ -61,7 +61,22 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 6](Sprints/Sprint6/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- AWS Skill Builder - Data Analytics Fundamentals (Portuguese)
+- AWS Skill Builder - AWS Partner: Data Analytics on AWS (Business)
+- AWS Skill Builder - Introduction to Amazon Kinesis Streams
+- AWS Skill Builder - Introduction to Amazon Kinesis Analytics
+- AWS Skill Builder - Introduction to Amazon Elastic MapReduce (EMR) (Portuguese)
+- AWS Skill Builder - Introduction to Amazon Athena (Portuguese)
+- AWS Skill Builder - Introduction to Amazon Quicksight (Portuguese)
+- AWS Skill Builder - Introduction to AWS IoT Analytics
+- AWS Skill Builder - Getting Started with Amazon Redshift
+- AWS Skill Builder - Deep Dive into Concepts and Tools for Analyzing Streaming Data (Portuguese)
+- AWS Skill Builder - Best Practices for Data Warehousing with Amazon Redshift (Portuguese)
+- AWS Skill Builder - Serverless Analytics (Portuguese)
+- AWS Skill Builder - Why Analytics for Games (Portuguese)
+
 
 [Sprint 7](Sprints/Sprint7/README.md) 
 
