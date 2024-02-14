@@ -80,7 +80,11 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 7](Sprints/Sprint7/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- Learn By Example: Hadoop, MapReduce for Big Data problems
+- Formação Spark com Pyspark : o Curso Completo
+
 
 [Sprint 8](Sprints/Sprint8/README.md) 
 
