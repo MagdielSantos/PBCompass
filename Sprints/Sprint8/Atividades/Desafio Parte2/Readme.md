@@ -1,0 +1,1 @@
+As Atividades do Desafio desenvolvidas nessa sprint estão em: [Sprint 1](DesafioETL/)
