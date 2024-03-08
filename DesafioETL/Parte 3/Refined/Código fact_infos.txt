@@ -1,0 +1,46 @@
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+from pyspark.sql.functions import explode, lit
+from awsglue.dynamicframe import DynamicFrame
+from pyspark.sql.functions import collect_list
+
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+source_file = args['S3_INPUT_PATH']
+target_path = args['S3_TARGET_PATH']
+
+
+df_fact_infos = glueContext.create_dynamic_frame.from_options(
+    "s3",
+    {
+        "paths": [source_file]
+    },
+    "parquet",
+    {}
+)
+
+df_fact_infos = df_fact_infos.toDF()
+
+
+df_fact_infos = df_fact_infos.selectExpr("id as id_filme", "popularity as popularidade", "vote_average as media_votacao","budget as custos", "revenue as arrecadacao", "release_date as data_lancamento" )
+
+df_fact_infos_filtered = df_fact_infos_filtered.coalesce(1)
+
+df_fact_dynamic = DynamicFrame.fromDF(df_fact_infos_filtered, glueContext, "df_fact_dynamic")
+
+glueContext.write_dynamic_frame.from_options(
+    frame=df_fact_dynamic,
+    connection_type="s3",
+    connection_options={"path": target_path + "/fact_infos"},
+    format="parquet"
+)
+job.commit()

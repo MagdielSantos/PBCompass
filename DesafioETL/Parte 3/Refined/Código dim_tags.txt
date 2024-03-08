@@ -1,0 +1,53 @@
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+from pyspark.sql.functions import explode, lit
+from awsglue.dynamicframe import DynamicFrame
+
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+source_file = args['S3_INPUT_PATH']
+target_path = args['S3_TARGET_PATH']
+
+
+dynamic_frame = glueContext.create_dynamic_frame.from_options(
+    "s3",
+    {
+        "paths": [source_file]
+    },
+    "parquet",
+    {}
+)
+
+
+glueContext = GlueContext(SparkContext.getOrCreate())
+
+df = dynamic_frame.toDF()
+
+df_exploded = df.select(explode("keywords.keywords").alias("keyword"))
+
+df_tags = df_exploded.select("keyword.id", "keyword.name")
+
+df_tags = df_tags.withColumnRenamed("id", "id_tag").withColumnRenamed("name", "nome_tag")
+
+df_tags = df_tags.coalesce(1)
+
+mapped_dynamic_frame = DynamicFrame.fromDF(df_tags, glueContext, "mapped_dynamic_frame")
+
+
+glueContext.write_dynamic_frame.from_options(
+    frame=mapped_dynamic_frame,
+    connection_type="s3",
+    connection_options={"path": target_path + "/dim_tags"},
+    format="parquet",
+    transformation_ctx="mapped_dynamic_frame"
+)
+job.commit()

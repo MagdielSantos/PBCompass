@@ -1,0 +1,45 @@
+import sys
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+from pyspark.sql.functions import collect_list, expr, when, array_contains, lit
+from awsglue.dynamicframe import DynamicFrame
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+source_file = args['S3_INPUT_PATH']
+target_path = args['S3_TARGET_PATH']
+
+
+df_dim_filmes = glueContext.create_dynamic_frame.from_options(
+    "s3",
+    {"paths": [source_file]},
+    "parquet",
+    {}
+)
+
+df_filmes_df = df_dim_filmes.toDF()
+
+df_filmes_df = df_filmes_df.selectExpr("id as id_filme", "title as titulo", "keywords.keywords.id as id_tag")
+
+df_filmes_df = df_filmes_df.withColumn("id_tag", when(array_contains("id_tag", 818), lit(818)).otherwise(0))
+
+df_filmes_dynamic = DynamicFrame.fromDF(df_filmes_df, glueContext, "df_filmes_dynamic")
+
+df_filmes_dynamic = df_filmes_dynamic.map(lambda x: {"id_filme": x["id_filme"], "titulo": x["titulo"], "id_tag": int(x["id_tag"])})
+
+df_filmes_dynamic = df_filmes_dynamic.coalesce(1)
+
+glueContext.write_dynamic_frame.from_options(
+    frame=df_filmes_dynamic,
+    connection_type="s3",
+    connection_options={"path": target_path + "/dim_filmes"},
+    format="parquet"
+)
+
+job.commit()

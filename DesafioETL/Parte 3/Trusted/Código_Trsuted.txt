@@ -1,0 +1,39 @@
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+source_file = args['S3_INPUT_PATH']
+target_path = args['S3_TARGET_PATH']
+
+df = glueContext.create_dynamic_frame.from_options(
+    "s3",
+    {
+        "paths": [source_file]
+    },
+    "json",
+    {}
+)
+
+df = df.select_fields(["budget", "id", "original_title", "title", "popularity", "release_date", "revenue", "runtime", "status", "vote_average", "keywords"])
+
+df = df.resolveChoice(specs=[('popularity', 'cast:int'), ('vote_average', 'cast:int')])
+
+df = df.filter(lambda x: x['title'] is not None)
+
+df = df.coalesce(1) 
+glueContext.write_dynamic_frame.from_options(
+    frame=df,
+    connection_type="s3",
+    connection_options={"path": target_path},
+    format="parquet"
+)
+job.commit()
