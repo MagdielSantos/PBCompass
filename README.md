@@ -88,11 +88,19 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 8](Sprints/Sprint8/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- Exercicios Spark
+- Ingestão de Dados com AWS Lambda e AWS S3
+
 
 [Sprint 9](Sprints/Sprint9/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- Modelagem de dados relacional
+- Modelagem de dados dimensional
+- Processamento de dados com AWS Glue
 
 [Sprint 10](Sprints/Sprint10/README.md) 
 
@@ -102,7 +110,7 @@ pequenos projetos pessoais para diversas situações]
 
 # Desafio Final 
 
-[Desafio Final Do PB](Desafio/README.md)
+[Desafio Final Do PB](DesafioETL/README.md)
 
 
 # Contatos
