@@ -6,4 +6,4 @@ Para facilitar a visualização das relações entre as tabelas, foram disponibi
 
 Durante a transformação da modelagem relacional em dimensional, foi criada uma tabela de fatos contendo apenas medidas numéricas e identificadores das dimensões relevantes. Além disso, foram criadas dimensões que contêm os campos relacionados aos eventos registrados na tabela de fatos.
 
-Esse processo de modelagem dimensional visa facilitar a análise de dados e a geração de insights por meio de consultas analíticas, permitindo uma visão mais holística e orientada a negócios dos dados armazenados no banco de dados.
+
