@@ -15,7 +15,6 @@ job.init(args['JOB_NAME'], args)
 source_file = args['S3_INPUT_PATH']
 target_path = args['S3_TARGET_PATH']
 
-
 df_dim_filmes = glueContext.create_dynamic_frame.from_options(
     "s3",
     {"paths": [source_file]},
@@ -25,13 +24,13 @@ df_dim_filmes = glueContext.create_dynamic_frame.from_options(
 
 df_filmes_df = df_dim_filmes.toDF()
 
-df_filmes_df = df_filmes_df.selectExpr("id as id_filme", "title as titulo", "keywords.keywords.id as id_tag")
+df_filmes_df = df_filmes_df.selectExpr("id as id_filme", "title as titulo", "keywords.keywords.id as baseado_em_livro")
 
-df_filmes_df = df_filmes_df.withColumn("id_tag", when(array_contains("id_tag", 818), lit(818)).otherwise(0))
+df_filmes_df = df_filmes_df.withColumn("baseado_em_livro", when(array_contains("baseado_em_livro", 818), lit("Sim")).otherwise("Não"))
 
 df_filmes_dynamic = DynamicFrame.fromDF(df_filmes_df, glueContext, "df_filmes_dynamic")
 
-df_filmes_dynamic = df_filmes_dynamic.map(lambda x: {"id_filme": x["id_filme"], "titulo": x["titulo"], "id_tag": int(x["id_tag"])})
+df_filmes_dynamic = df_filmes_dynamic.map(lambda x: {"id_filme": x["id_filme"], "titulo": x["titulo"], "baseado_em_livro": x["baseado_em_livro"]})
 
 df_filmes_dynamic = df_filmes_dynamic.coalesce(1)
 
