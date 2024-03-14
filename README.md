@@ -104,7 +104,11 @@ pequenos projetos pessoais para diversas situações]
 
 [Sprint 10](Sprints/Sprint10/README.md) 
 
-![](https://geps.dev/progress/0)
+![](https://geps.dev/progress/100)
+
+- Complete Introduction to AWS QuickSight
+- Workshop de QuickSight para Autores
+- Criação do dashboard no AWS quicksight
 
 
 
