@@ -30,8 +30,6 @@ df_filmes_df = df_filmes_df.withColumn("baseado_em_livro", when(array_contains("
 
 df_filmes_dynamic = DynamicFrame.fromDF(df_filmes_df, glueContext, "df_filmes_dynamic")
 
-df_filmes_dynamic = df_filmes_dynamic.map(lambda x: {"id_filme": x["id_filme"], "titulo": x["titulo"], "baseado_em_livro": x["baseado_em_livro"]})
-
 df_filmes_dynamic = df_filmes_dynamic.coalesce(1)
 
 glueContext.write_dynamic_frame.from_options(
